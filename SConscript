@@ -54,7 +54,7 @@ if GetDepend(['RT_USING_USB']):
 if GetDepend(['RT_USING_CAN']):
     src += [os.path.join(src_path, 'stm32n6xx_hal_fdcan.c')]
 
-if GetDepend(['RT_USING_HWTIMER']) or GetDepend(['RT_USING_PWM']) or GetDepend(['RT_USING_PULSE_ENCODER']):
+if GetDepend(['RT_USING_CLOCK_TIME']) or GetDepend(['RT_USING_HWTIMER']) or GetDepend(['RT_USING_PWM']) or GetDepend(['RT_USING_PULSE_ENCODER']):
     src += [os.path.join(src_path, 'stm32n6xx_hal_tim.c')]
     src += [os.path.join(src_path, 'stm32n6xx_hal_tim_ex.c')]
     src += [os.path.join(src_path, 'stm32n6xx_hal_lptim.c')]
